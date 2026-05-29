@@ -277,11 +277,159 @@
     }
     footer .brand { font-family: 'Playfair Display', serif; font-size: 16px; color: var(--ink); }
 
+    /* Other Munich */
+    .other-munich {
+      padding: 120px 36px 100px;
+      background: var(--cream-dark);
+      text-align: center;
+    }
+    .other-munich h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(34px, 5vw, 60px);
+      font-weight: 700;
+      line-height: 1.05;
+      letter-spacing: -1px;
+      margin-bottom: 56px;
+      max-width: 920px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .other-munich h2 .accent { color: var(--coral); font-style: italic; font-weight: 400; }
+    .munich-grid {
+      display: grid; grid-template-columns: repeat(4, 1fr);
+      gap: 16px; max-width: 1300px; margin: 0 auto;
+    }
+    @media (max-width: 880px) { .munich-grid { grid-template-columns: repeat(2, 1fr); } }
+    .munich-card {
+      position: relative; aspect-ratio: 3/4;
+      border-radius: 20px; overflow: hidden;
+      background-size: cover; background-position: center;
+      transition: transform .3s;
+    }
+    .munich-card:hover { transform: translateY(-4px) scale(1.01); }
+    .munich-card::after {
+      content: ''; position: absolute; inset: 0;
+      background: linear-gradient(to top, rgba(26,26,46,0.85) 0%, rgba(26,26,46,0.05) 55%);
+    }
+    .munich-card .label {
+      position: absolute; bottom: 22px; left: 22px; right: 22px;
+      color: var(--cream); z-index: 1; text-align: left;
+    }
+    .munich-card .label .name {
+      font-family: 'Playfair Display', serif;
+      font-size: 22px; font-weight: 700;
+      line-height: 1.1; margin-bottom: 4px;
+    }
+    .munich-card .label .tag {
+      font-size: 11px; opacity: 0.85;
+      letter-spacing: 0.6px; text-transform: uppercase;
+    }
+    .munich-card.cuban .label .name { color: var(--coral-soft); }
+
+    /* Give-back */
+    .give-back {
+      padding: 120px 36px;
+      max-width: 820px; margin: 0 auto;
+      text-align: center;
+    }
+    .give-back-num {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(120px, 22vw, 240px);
+      font-weight: 900; line-height: 0.9;
+      color: var(--coral); letter-spacing: -8px;
+      margin-bottom: 16px;
+    }
+    .give-back h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(28px, 3.6vw, 40px);
+      font-weight: 700; line-height: 1.15;
+      margin-bottom: 24px; letter-spacing: -0.5px;
+    }
+    .give-back p {
+      font-size: 17px; line-height: 1.7;
+      color: var(--ink-soft); max-width: 640px; margin: 0 auto;
+    }
+
+    /* Movement deep */
+    .movement-deep {
+      padding: 100px 36px 140px;
+      max-width: 1200px; margin: 0 auto;
+      text-align: center;
+    }
+    .movement-deep h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(32px, 4.5vw, 56px);
+      font-weight: 700; letter-spacing: -1px;
+      margin-bottom: 12px;
+    }
+    .movement-deep .sub {
+      color: var(--ink-soft); font-size: 18px;
+      margin-bottom: 64px;
+    }
+    .movement-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr);
+      gap: 32px; text-align: left;
+    }
+    @media (max-width: 880px) { .movement-grid { grid-template-columns: 1fr; } }
+    .mov-item {
+      padding: 36px 32px;
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      background: var(--cream);
+      transition: border-color .25s;
+    }
+    .mov-item:hover { border-color: var(--coral); }
+    .mov-icon {
+      font-family: 'Playfair Display', serif;
+      font-size: 40px; color: var(--coral);
+      line-height: 1; margin-bottom: 20px;
+    }
+    .mov-item h4 {
+      font-family: 'Playfair Display', serif;
+      font-size: 22px; font-weight: 700;
+      margin-bottom: 10px;
+    }
+    .mov-item p {
+      font-size: 15px; line-height: 1.6;
+      color: var(--ink-soft);
+    }
+
+    /* Founders — avatar grid */
+    .founder-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+      gap: 32px 16px;
+      max-width: 1100px; margin: 0 auto;
+    }
+    .founder {
+      display: flex; flex-direction: column; align-items: center;
+      text-align: center;
+    }
+    .avatar {
+      width: 72px; height: 72px; border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-family: 'Playfair Display', serif;
+      font-size: 30px; font-weight: 700;
+      color: var(--cream);
+      margin-bottom: 14px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.3);
+    }
+    .fname {
+      font-family: 'Playfair Display', serif;
+      font-size: 17px; font-weight: 700;
+      color: var(--cream); margin-bottom: 2px;
+    }
+    .role {
+      font-size: 11px; letter-spacing: 0.4px;
+      color: rgba(248,241,229,0.55);
+      text-transform: uppercase;
+    }
+
     /* Mobile */
     @media (max-width: 720px) {
       header { padding: 14px 20px; }
       nav.main { display: none; }
-      .hero, .mission, .pillars, .capture, .founders { padding-left: 20px; padding-right: 20px; }
+      .hero, .mission, .pillars, .capture, .founders, .other-munich, .give-back, .movement-deep { padding-left: 20px; padding-right: 20px; }
       .pillar { padding: 32px 24px; }
     }
   </style>
@@ -292,7 +440,8 @@
     <div class="logo">Corazón <span class="heart">♥</span> Cubano</div>
     <nav class="main">
       <a href="#mission" data-en="The Refuge" data-de="Der Zufluchtsort" data-es="El Refugio">The Refuge</a>
-      <a href="#pillars" data-en="What we do" data-de="Was wir tun" data-es="Lo que hacemos">What we do</a>
+      <a href="#pillars" data-en="The Festival" data-de="Das Festival" data-es="El Festival">The Festival</a>
+      <a href="#movement" data-en="Year-round" data-de="Ganzjährig" data-es="Todo el año">Year-round</a>
       <a href="#founders" data-en="Founders" data-de="Gründer" data-es="Fundadores">Founders</a>
       <a href="#capture" data-en="Join" data-de="Mitmachen" data-es="Únete">Join</a>
     </nav>
@@ -327,6 +476,61 @@
     </div>
   </section>
 
+  <!-- OTHER MUNICH -->
+  <section class="other-munich">
+    <div class="section-eyebrow"
+         data-en="Munich isn't only beer halls"
+         data-de="München ist nicht nur Bierzelte"
+         data-es="Múnich no es solo cervecerías">Munich isn't only beer halls</div>
+    <h2 data-en="It's also <span class='accent'>castles, canyons, the Isar</span> &mdash; and one Cuban week in July."
+        data-de="Es ist auch <span class='accent'>Schlösser, Schluchten, die Isar</span> &mdash; und eine kubanische Woche im Juli."
+        data-es="También son <span class='accent'>castillos, cañones, el Isar</span> &mdash; y una semana cubana en julio.">
+      It's also <span class="accent">castles, canyons, the Isar</span> &mdash; and one Cuban week in July.
+    </h2>
+
+    <div class="munich-grid">
+      <div class="munich-card" style="background-image:url('./img-castle.png')">
+        <div class="label">
+          <div class="name">Neuschwanstein</div>
+          <div class="tag"
+               data-en="2-hour drive · fairy-tale Bavaria"
+               data-de="2 Stunden Fahrt · Märchenhaftes Bayern"
+               data-es="2 horas en coche · Baviera de cuento">2-hour drive · fairy-tale Bavaria</div>
+        </div>
+      </div>
+      <div class="munich-card" style="background-image:url('./img-canyon.png')">
+        <div class="label">
+          <div class="name">Partnachklamm</div>
+          <div class="tag"
+               data-en="Alpine canyon · 1 hr south"
+               data-de="Alpenschlucht · 1 Std südlich"
+               data-es="Cañón alpino · 1 h al sur">Alpine canyon · 1 hr south</div>
+        </div>
+      </div>
+      <div class="munich-card" style="background-image:url('./img-river.png')">
+        <div class="label">
+          <div class="name"
+               data-en="Isar &amp; Flaucher"
+               data-de="Isar &amp; Flaucher"
+               data-es="Isar &amp; Flaucher">Isar &amp; Flaucher</div>
+          <div class="tag"
+               data-en="River beaches in the city"
+               data-de="Flussstrände in der Stadt"
+               data-es="Playas fluviales en la ciudad">River beaches in the city</div>
+        </div>
+      </div>
+      <div class="munich-card cuban" style="background-image:url('./hero.png')">
+        <div class="label">
+          <div class="name">Agua Pichi</div>
+          <div class="tag"
+               data-en="1&ndash;4 July 2027 · the Cuban week"
+               data-de="1.&ndash;4. Juli 2027 · die kubanische Woche"
+               data-es="1&ndash;4 julio 2027 · la semana cubana">1&ndash;4 July 2027 · the Cuban week</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- MISSION -->
   <section class="mission" id="mission">
     <div class="section-eyebrow"
@@ -342,6 +546,12 @@
        data-de="Die Welt denkt bei München an Oktoberfest. Wir bauen die Gegenwoche. Sieben Tage im Juli schlägt München mit einem kubanischen Herzen &mdash; <strong>Musik, Tanz, Essen, Sprache, Kunst</strong>. Ein Zuhause für eine Kultur, die leicht reist, aber einen Landeplatz braucht."
        data-es="El mundo cree que Múnich es Oktoberfest. Nosotros construimos la contra-semana. Durante siete días en julio, Múnich late con un corazón cubano &mdash; <strong>música, baile, comida, idioma, arte</strong>. Un hogar para una cultura que viaja ligera pero necesita un lugar donde aterrizar.">
       The world thinks Munich means Oktoberfest. We're building the counter-week. For seven days in July, Munich beats with a Cuban heart &mdash; <strong>music, dance, food, language, art</strong>. A home for a culture that travels light but needs a place to land.
+    </p>
+    <p style="margin-top: 28px; font-size: clamp(17px, 1.8vw, 20px);"
+       data-en="<em>Refuge</em> is not asylum. Refuge is a place where Cuban music plays year-round, where Cuban food sits on a Bavarian table, where Spanish flows in a Munich bar at 1am. We are eleven friends building that place &mdash; <strong>one festival, one bar, one community at a time</strong>."
+       data-de="<em>Zuflucht</em> ist nicht Asyl. Zuflucht ist ein Ort, an dem kubanische Musik das ganze Jahr spielt, an dem kubanisches Essen auf einem bayerischen Tisch steht, an dem Spanisch um 1 Uhr morgens in einer Münchner Bar fließt. Wir sind elf Freunde, die diesen Ort bauen &mdash; <strong>ein Festival, eine Bar, eine Gemeinschaft nach der anderen</strong>."
+       data-es="<em>Refugio</em> no es asilo. Refugio es un lugar donde la música cubana suena todo el año, donde la comida cubana se sirve en una mesa bávara, donde el español fluye en un bar de Múnich a la 1 de la madrugada. Somos once amigos construyendo ese lugar &mdash; <strong>un festival, un bar, una comunidad a la vez</strong>.">
+      <em>Refuge</em> is not asylum. Refuge is a place where Cuban music plays year-round, where Cuban food sits on a Bavarian table, where Spanish flows in a Munich bar at 1am. We are eleven friends building that place &mdash; <strong>one festival, one bar, one community at a time</strong>.
     </p>
   </section>
 
@@ -412,6 +622,70 @@
     </div>
   </section>
 
+  <!-- GIVE-BACK -->
+  <section class="give-back" id="give-back">
+    <div class="give-back-num">5%</div>
+    <h3 data-en="of everything we make goes back to Cuba."
+        data-de="von allem, was wir verdienen, geht zurück nach Kuba."
+        data-es="de todo lo que generamos vuelve a Cuba.">
+      of everything we make goes back to Cuba.
+    </h3>
+    <p data-en="Music schools in Habana. Dance teachers&apos; families. Local cultural projects on the island. We track it. We publish it. <strong>We don&apos;t take a culture from a place without giving back to it.</strong>"
+       data-de="Musikschulen in Habana. Familien der Tanzlehrer. Lokale Kulturprojekte auf der Insel. Wir verfolgen es. Wir veröffentlichen es. <strong>Wir nehmen eine Kultur nicht von einem Ort, ohne ihm etwas zurückzugeben.</strong>"
+       data-es="Escuelas de música en La Habana. Las familias de los maestros de baile. Proyectos culturales locales en la isla. Lo seguimos. Lo publicamos. <strong>No tomamos una cultura de un lugar sin devolverle algo.</strong>">
+      Music schools in Habana. Dance teachers' families. Local cultural projects on the island. We track it. We publish it. <strong>We don't take a culture from a place without giving back to it.</strong>
+    </p>
+  </section>
+
+  <!-- MOVEMENT DEEP -->
+  <section class="movement-deep" id="movement">
+    <div class="section-eyebrow"
+         data-en="the other 51 weeks"
+         data-de="die anderen 51 Wochen"
+         data-es="las otras 51 semanas">the other 51 weeks</div>
+    <h3 data-en="A festival is one week. <em>A movement is a life.</em>"
+        data-de="Ein Festival ist eine Woche. <em>Eine Bewegung ist ein Leben.</em>"
+        data-es="Un festival es una semana. <em>Un movimiento es una vida.</em>">
+      A festival is one week. <em>A movement is a life.</em>
+    </h3>
+    <p class="sub"
+       data-en="What Corazón Cubano does the other 51 weeks of the year, in Munich:"
+       data-de="Was Corazón Cubano die anderen 51 Wochen des Jahres in München macht:"
+       data-es="Lo que Corazón Cubano hace las otras 51 semanas del año, en Múnich:">
+      What Corazón Cubano does the other 51 weeks of the year, in Munich:
+    </p>
+
+    <div class="movement-grid">
+      <div class="mov-item">
+        <div class="mov-icon">♪</div>
+        <h4 data-en="Monthly socials" data-de="Monatliche Treffen" data-es="Encuentros mensuales">Monthly socials</h4>
+        <p data-en="One night a month, somewhere in Munich. Cuban music, free entry, open floor. Bring a friend, leave with five."
+           data-de="Eine Nacht im Monat, irgendwo in München. Kubanische Musik, freier Eintritt, offene Tanzfläche. Komm mit einem Freund, geh mit fünf."
+           data-es="Una noche al mes, en algún lugar de Múnich. Música cubana, entrada libre, pista abierta. Ven con un amigo, vete con cinco.">
+          One night a month, somewhere in Munich. Cuban music, free entry, open floor. Bring a friend, leave with five.
+        </p>
+      </div>
+      <div class="mov-item">
+        <div class="mov-icon">¡!</div>
+        <h4 data-en="Language exchange" data-de="Sprachaustausch" data-es="Intercambio de idiomas">Language exchange</h4>
+        <p data-en="Spanish, German, English — at a table, with coffee. No app, no class. Just people who want to be understood in a second language."
+           data-de="Spanisch, Deutsch, Englisch — an einem Tisch, bei Kaffee. Keine App, kein Kurs. Nur Menschen, die in einer zweiten Sprache verstanden werden wollen."
+           data-es="Español, alemán, inglés — en una mesa, con café. Sin app, sin clase. Solo gente que quiere ser entendida en un segundo idioma.">
+          Spanish, German, English — at a table, with coffee. No app, no class. Just people who want to be understood in a second language.
+        </p>
+      </div>
+      <div class="mov-item">
+        <div class="mov-icon">⌂</div>
+        <h4 data-en="Diaspora gatherings" data-de="Diaspora-Treffen" data-es="Reuniones de la diáspora">Diaspora gatherings</h4>
+        <p data-en="For Cubans in Munich. For the people who carry the island in their chest. A table, a meal, a place to land."
+           data-de="Für Kubaner in München. Für die Menschen, die die Insel in der Brust tragen. Ein Tisch, eine Mahlzeit, ein Landeplatz."
+           data-es="Para cubanos en Múnich. Para quienes llevan la isla en el pecho. Una mesa, una comida, un lugar donde aterrizar.">
+          For Cubans in Munich. For the people who carry the island in their chest. A table, a meal, a place to land.
+        </p>
+      </div>
+    </div>
+  </section>
+
   <!-- FOUNDERS -->
   <section class="founders" id="founders">
     <div class="eyebrow"
@@ -423,18 +697,62 @@
         data-es="Fundado en Múnich por once personas que llevan Cuba en el corazón.">
       Founded in Munich by eleven people who carry Cuba in their hearts.
     </h3>
-    <div class="founder-names">
-      <span>Alösha</span>
-      <span>Amado</span>
-      <span>Yuro</span>
-      <span>Emilito</span>
-      <span>Jennifer</span>
-      <span>Shahin</span>
-      <span>Klaus</span>
-      <span>Gabriela</span>
-      <span>Omar</span>
-      <span>Breakel</span>
-      <span>Yunior</span>
+    <div class="founder-grid">
+      <div class="founder">
+        <div class="avatar" style="background:linear-gradient(135deg,#D4574A,#B8412F)">A</div>
+        <div class="fname">Alösha</div>
+        <div class="role" data-en="Festival Lead" data-de="Festivalleitung" data-es="Director del Festival">Festival Lead</div>
+      </div>
+      <div class="founder">
+        <div class="avatar" style="background:linear-gradient(135deg,#E0A458,#C28435)">A</div>
+        <div class="fname">Amado</div>
+        <div class="role" data-en="Creative Director" data-de="Creative Director" data-es="Director Creativo">Creative Director</div>
+      </div>
+      <div class="founder">
+        <div class="avatar" style="background:linear-gradient(135deg,#0E5C5F,#084244)">Y</div>
+        <div class="fname">Yuro</div>
+        <div class="role" data-en="Booking" data-de="Booking" data-es="Booking">Booking</div>
+      </div>
+      <div class="founder">
+        <div class="avatar" style="background:linear-gradient(135deg,#E97574,#D4574A)">E</div>
+        <div class="fname">Emilito</div>
+        <div class="role" data-en="Workshops" data-de="Workshops" data-es="Talleres">Workshops</div>
+      </div>
+      <div class="founder">
+        <div class="avatar" style="background:linear-gradient(135deg,#C28435,#A06A24)">J</div>
+        <div class="fname">Jennifer</div>
+        <div class="role" data-en="Sponsoring" data-de="Sponsoring" data-es="Patrocinio">Sponsoring</div>
+      </div>
+      <div class="founder">
+        <div class="avatar" style="background:linear-gradient(135deg,#084244,#0E5C5F)">S</div>
+        <div class="fname">Shahin</div>
+        <div class="role" data-en="Investor" data-de="Investor" data-es="Inversor">Investor</div>
+      </div>
+      <div class="founder">
+        <div class="avatar" style="background:linear-gradient(135deg,#B8412F,#8E2F1F)">K</div>
+        <div class="fname">Klaus</div>
+        <div class="role" data-en="Founding Member" data-de="Gründungsmitglied" data-es="Miembro Fundador">Founding Member</div>
+      </div>
+      <div class="founder">
+        <div class="avatar" style="background:linear-gradient(135deg,#E0A458,#C28435)">G</div>
+        <div class="fname">Gabriela</div>
+        <div class="role" data-en="Founding Member" data-de="Gründungsmitglied" data-es="Miembro Fundadora">Founding Member</div>
+      </div>
+      <div class="founder">
+        <div class="avatar" style="background:linear-gradient(135deg,#0E5C5F,#084244)">O</div>
+        <div class="fname">Omar</div>
+        <div class="role" data-en="Founding Member" data-de="Gründungsmitglied" data-es="Miembro Fundador">Founding Member</div>
+      </div>
+      <div class="founder">
+        <div class="avatar" style="background:linear-gradient(135deg,#E97574,#D4574A)">B</div>
+        <div class="fname">Breakel</div>
+        <div class="role" data-en="Founding Member" data-de="Gründungsmitglied" data-es="Miembro Fundador">Founding Member</div>
+      </div>
+      <div class="founder">
+        <div class="avatar" style="background:linear-gradient(135deg,#C28435,#A06A24)">Y</div>
+        <div class="fname">Yunior</div>
+        <div class="role" data-en="Founding Member" data-de="Gründungsmitglied" data-es="Miembro Fundador">Founding Member</div>
+      </div>
     </div>
   </section>
 
