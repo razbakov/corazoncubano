@@ -654,11 +654,93 @@ footer .footer-links a:hover { color: var(--coral); }
 footer .right { text-align: right; }
 @media (max-width: 720px) { footer .right { text-align: center; } }
 
+/* ---------- Vision (Little Havana on Theresienwiese) ---------- */
+.vision {
+  background: var(--ink);
+  color: var(--cream);
+  padding: 140px 36px;
+  text-align: center;
+}
+.vision .section-eyebrow { color: var(--coral-soft); }
+.vision h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(40px, 6vw, 80px);
+  font-weight: 700;
+  letter-spacing: -1.5px;
+  line-height: 1.05;
+  margin-bottom: 24px;
+  max-width: 960px;
+  margin-left: auto; margin-right: auto;
+}
+.vision h2 .accent { color: var(--coral-soft); font-style: italic; font-weight: 400; }
+.vision-intro {
+  font-size: clamp(17px, 1.8vw, 20px);
+  color: rgba(248,241,229,0.72);
+  max-width: 760px;
+  margin: 0 auto 72px;
+  line-height: 1.65;
+}
+.vision-intro strong { color: var(--cream); font-weight: 500; }
+.vision-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 28px;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+@media (max-width: 880px) { .vision-grid { grid-template-columns: 1fr; } }
+.vision-card {
+  position: relative;
+  border-radius: 24px;
+  overflow: hidden;
+  background: #0F0F1E;
+  border: 1px solid rgba(248,241,229,0.08);
+  transition: transform .3s, border-color .3s;
+}
+.vision-card:hover { transform: translateY(-4px); border-color: rgba(212,87,74,0.45); }
+.vision-card img {
+  width: 100%;
+  aspect-ratio: 16/9;
+  object-fit: cover;
+  display: block;
+}
+.vision-card .meta {
+  padding: 26px 30px 30px;
+  text-align: left;
+}
+.vision-card .vname {
+  font-family: 'Playfair Display', serif;
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 1.1;
+  margin-bottom: 6px;
+  color: var(--cream);
+}
+.vision-card .vname .es { color: var(--coral-soft); font-style: italic; font-weight: 400; }
+.vision-card .vtag {
+  font-size: 11px;
+  letter-spacing: 0.7px;
+  text-transform: uppercase;
+  color: rgba(248,241,229,0.5);
+  margin-bottom: 14px;
+}
+.vision-card .vdesc {
+  font-size: 15px;
+  line-height: 1.6;
+  color: rgba(248,241,229,0.82);
+}
+.vision-disclaimer {
+  margin-top: 64px;
+  font-family: 'Caveat', cursive;
+  font-size: 22px;
+  color: rgba(248,241,229,0.48);
+}
+
 /* ---------- Mobile ---------- */
 @media (max-width: 720px) {
   header { padding: 14px 20px; }
   nav.main { display: none; }
-  .hero, .mission, .pillars, .capture, .founders, .other-munich, .give-back, .movement-deep, .section, .subpage-hero { padding-left: 20px; padding-right: 20px; }
+  .hero, .mission, .pillars, .capture, .founders, .other-munich, .give-back, .movement-deep, .vision, .section, .subpage-hero { padding-left: 20px; padding-right: 20px; }
   .pillar { padding: 32px 24px; }
   .subpage-hero { padding-top: 140px; padding-bottom: 80px; }
 }
